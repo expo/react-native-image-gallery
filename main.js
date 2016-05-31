@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   Image,
+  Platform,
   ScrollView,
   StyleSheet,
   Text,
@@ -63,7 +64,7 @@ class FakeContent extends Component {
 
   render() {
     return (
-      <View style={{flex: 1, paddingTop: 40,}}>
+      <View style={{flex: 1, paddingTop: Platform.OS === 'android' ? 20 : 40, paddingBottom: Platform.OS === 'android' ? 10 : 0}}>
         <View style={{paddingBottom: 10, borderBottomColor: '#eee', borderBottomWidth: 1, alignItems: 'center'}}>
           <Text style={{fontSize: 20, marginLeft: 10}}>My favourite cats</Text>
         </View>
@@ -113,39 +114,39 @@ const list = Immutable.fromJS({
     {
       id: 'a',
       description: 'This cat is orange! An orange cat! Its eyes are olive though.',
-      image_url: 'http://url.brentvatne.ca/jkfF.png',
+      image_url: 'https://s3-us-west-2.amazonaws.com/examples-exp/image-gallery/cat1.jpg',
       asset: {
         width: 632,
         height: 475,
         type: 'static',
         cover: {
-          uri: 'http://url.brentvatne.ca/jkfF.png',
+          uri: 'https://s3-us-west-2.amazonaws.com/examples-exp/image-gallery/cat1.jpg',
         }
       }
     },
     {
       id: 'b',
-      image_url: 'http://url.brentvatne.ca/1eYn4.jpg',
+      image_url: 'https://s3-us-west-2.amazonaws.com/examples-exp/image-gallery/cat2.jpg',
       description: 'Look at this cat catching a mouse. Notice that "catch" includes the word "cat". Coincidence?',
       asset: {
         width: 1000,
         height: 764,
         type: 'static',
         cover: {
-          uri: 'http://url.brentvatne.ca/1eYn4.jpg',
+          uri: 'https://s3-us-west-2.amazonaws.com/examples-exp/image-gallery/cat2.jpg',
         }
       }
     },
     {
       id: 'c',
-      image_url: 'http://url.brentvatne.ca/LrEm.png',
+      image_url: 'https://s3-us-west-2.amazonaws.com/examples-exp/image-gallery/cat3.png',
       description: 'This cat is eating a banana, while dressed as a monkey. Silly cat, you are a cat not a monkey! Congrats on going vegetarian though, be sure to take your b12',
       asset: {
         width: 785,
         height: 785,
         type: 'static',
         cover: {
-          uri: 'http://url.brentvatne.ca/LrEm.png',
+          uri: 'https://s3-us-west-2.amazonaws.com/examples-exp/image-gallery/cat3.png',
         }
       }
     }
