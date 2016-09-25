@@ -1,16 +1,15 @@
 {
-  "name": "ImageGalleryExample",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start"
-  },
+  "name": "@exponent/react-native-image-gallery",
+  "version": "1.0.0",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
   "dependencies": {
     "immutable": "^3.8.1",
     "mirror-creator": "^1.1.0",
-    "react": "^15.1.0",
+    "react-addons-pure-render-mixin": "^15.3.2",
     "react-mixin": "^3.0.5",
-    "react-native": "^0.27.0-rc2",
     "react-native-timer-mixin": "^0.11.0",
     "react-redux": "^4.4.5",
     "react-timer-mixin": "^0.13.3",
