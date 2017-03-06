@@ -1,15 +1,16 @@
 {
   "name": "image-gallery-example",
   "version": "0.0.0",
-  "description": "Hello Exponent!",
-  "author": "exponent.team@gmail.com",
+  "description": "Hello Expo!",
+  "author": "support@expo.io",
   "private": true,
   "main": "main.js",
   "dependencies": {
-    "@exponent/react-native-image-gallery": "file:///Users/brent/coding/react-native-image-gallery",
-    "ImageGalleryExample": "file:///Users/brent/coding/react-native-image-gallery",
-    "exponent": "~10.0.0",
-    "react": "~15.3.1",
-    "react-native": "github:exponentjs/react-native#sdk-10.1.0"
+    "@expo/ex-navigation": "^2.9.2",
+    "@expo/vector-icons": "~4.0.0",
+    "@expo/react-native-image-gallery": "../",
+    "expo": "^14.0.0",
+    "react": "~15.4.0",
+    "react-native": "https://github.com/exponent/react-native/archive/sdk-14.0.0.tar.gz"
   }
 }

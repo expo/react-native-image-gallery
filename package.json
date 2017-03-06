@@ -1,5 +1,5 @@
 {
-  "name": "@exponent/react-native-image-gallery",
+  "name": "@expo/react-native-image-gallery",
   "version": "1.0.4",
   "files": [
     "lib"
@@ -17,8 +17,8 @@
   },
   "peerDependencies": {
     "react": "*",
-    "@exponent/ex-navigation": "*",
-    "exponent": "*",
+    "@expo/ex-navigation": "*",
+    "expo": "*",
     "react-native": "*"
   },
   "license": "MIT"

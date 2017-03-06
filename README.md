@@ -1,3 +1,3 @@
-### @exponent/react-native-image-gallery
+### @expo/react-native-image-gallery
 
-See it in action: https://getexponent.com/@community/image-gallery-example
+See it in action: https://exp.host/@community/image-gallery-example

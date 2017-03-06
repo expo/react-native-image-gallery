@@ -1,4 +1,4 @@
-import Exponent from 'exponent';
+import Expo from 'expo';
 import React from 'react';
 import {
   AppRegistry,
@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 
 import Immutable from 'immutable';
-import ImageGallery, { openImageGallery } from '@exponent/react-native-image-gallery';
+import ImageGallery, { openImageGallery } from '@expo/react-native-image-gallery';
 
 class ListItem extends React.Component {
   _openInImageGallery = () => {
@@ -118,4 +118,4 @@ const list = [
   }
 ];
 
-Exponent.registerRootComponent(App);
+Expo.registerRootComponent(App);
