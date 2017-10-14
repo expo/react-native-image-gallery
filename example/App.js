@@ -1,7 +1,6 @@
 import Expo from 'expo';
 import React from 'react';
 import {
-  AppRegistry,
   Image,
   Platform,
   ScrollView,
@@ -65,8 +64,7 @@ class FakeContent extends React.Component {
   }
 }
 
-class App extends React.Component {
-
+export default class App extends React.Component {
   render() {
     return (
       <View style={{flex: 1}}>
@@ -117,5 +115,3 @@ const list = [
     height: 640,
   }
 ];
-
-Expo.registerRootComponent(App);

@@ -1,16 +1,13 @@
 {
   "name": "image-gallery-example",
   "version": "0.0.0",
-  "description": "Hello Expo!",
   "author": "support@expo.io",
-  "private": true,
-  "main": "main.js",
+  "main": "node_modules/expo/AppEntry.js",
   "dependencies": {
-    "@expo/ex-navigation": "^2.9.2",
-    "@expo/vector-icons": "~4.0.0",
     "@expo/react-native-image-gallery": "../",
-    "expo": "^14.0.0",
-    "react": "~15.4.0",
-    "react-native": "https://github.com/exponent/react-native/archive/sdk-14.0.0.tar.gz"
+    "expo": "^21.0.0",
+    "react": "16.0.0-alpha.12",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-21.0.2.tar.gz",
+    "react-navigation": "^1.0.0-beta.12"
   }
 }
