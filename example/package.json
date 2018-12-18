@@ -5,7 +5,7 @@
   "main": "node_modules/expo/AppEntry.js",
   "dependencies": {
     "@expo/react-native-image-gallery": "../",
-    "expo": "^21.0.0",
+    "expo": "^31.0.6",
     "react": "16.0.0-alpha.12",
     "react-native": "https://github.com/expo/react-native/archive/sdk-21.0.2.tar.gz",
     "react-navigation": "^1.0.0-beta.12"
