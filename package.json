@@ -1,23 +1,41 @@
 {
   "name": "@expo/react-native-image-gallery",
-  "version": "2.2.0",
+  "version": "2.3.0",
+  "description": "Image gallery for Expo",
   "author": "support@expo.io",
   "files": [
     "lib"
   ],
   "main": "lib/index.js",
+  "directories": {
+    "example": "example",
+    "lib": "lib"
+  },
+  "homepage": "https://github.com/expo/react-native-image-gallery#readme",
+  "keywords": [
+    "expo",
+    "photos",
+    "images",
+    "gallery"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/expo/react-native-image-gallery/issues"
+  },
   "dependencies": {
     "immutable": "^3.8.1",
     "mirror-creator": "^1.1.0",
-    "prop-types": "^15.6.0",
+    "prop-types": "^15.6.2",
     "react-redux": "^4.4.5",
-    "react-timer-mixin": "^0.13.3",
+    "react-timer-mixin": "^0.13.4",
     "redux": "^3.5.2"
   },
   "peerDependencies": {
-    "expo": "*",
-    "react": "*",
-    "react-native": "*",
-    "react-navigation": "*"
+    "expo": ">= 30.0.0",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "babel-preset-expo": "^5.0.0",
+    "babel-preset-react-native": "^4.0.1"
   }
 }

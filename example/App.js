@@ -1,6 +1,7 @@
 import Expo from 'expo';
 import React from 'react';
 import {
+  Dimensions,
   Image,
   Platform,
   ScrollView,
@@ -8,6 +9,7 @@ import {
   Text,
   TouchableWithoutFeedback,
   View,
+  SafeAreaView,
   StatusBar,
 } from 'react-native';
 
@@ -20,7 +22,7 @@ class ListItem extends React.Component {
 
     this._view.measure((rx, ry, w, h, x, y) => {
       openImageGallery({
-        animationMeasurements: {w, h, x, y},
+        animationMeasurements: { w, h, x, y },
         list,
         item,
       });
@@ -28,35 +30,29 @@ class ListItem extends React.Component {
   };
 
   render() {
-    let { list, item } = this.props;
-
-    let { width, height } = item;
-
-    let targetWidth = 150.0;
-    let multiplier = targetWidth / width;
-    let targetHeight = multiplier * height;
+    let { item } = this.props;
 
     return (
       <TouchableWithoutFeedback onPress={this._openInImageGallery}>
         <Image
           ref={view => { this._view = view }}
-          source={{uri: item.imageUrl}}
-          style={{width: targetWidth, height: targetHeight, marginBottom: 20}} />
+          source={{ uri: item.imageUrl }}
+          style={styles.thumbnail} />
       </TouchableWithoutFeedback>
     );
   }
 
 }
 
-class FakeContent extends React.Component {
+class ImageGrid extends React.Component {
   render() {
     return (
-      <View style={{flex: 1, paddingTop: 40, paddingBottom: Platform.OS === 'android' ? 10 : 0}}>
-        <View style={{paddingBottom: 10, borderBottomColor: '#eee', borderBottomWidth: 1, alignItems: 'center'}}>
-          <Text style={{fontSize: 20, marginLeft: 10}}>My favourite brewery</Text>
+      <View style={styles.imagegrid}>
+        <View style={styles.header}>
+          <Text style={styles.heading}>Example Image Gallery</Text>
         </View>
 
-        <ScrollView style={{flex: 1}} contentContainerStyle={{alignItems: 'center', paddingTop: 20}}>
+        <ScrollView contentContainerStyle={styles.layout}>
           {list.map(item => <ListItem key={item.imageUrl} item={item} />)}
         </ScrollView>
       </View>
@@ -67,50 +63,68 @@ class FakeContent extends React.Component {
 export default class App extends React.Component {
   render() {
     return (
-      <View style={{flex: 1}}>
-        <View style={styles.container}>
-          <FakeContent />
-        </View>
+      <SafeAreaView style={styles.container}>
+        <ImageGrid />
 
         <ImageGallery />
+
         <StatusBar barStyle="default" />
-      </View>
+      </SafeAreaView>
     );
   }
 }
+
+const DEVICE_WIDTH = Dimensions.get('window').width;
+var THUMBNAILS_PER_ROW = 2;
+var THUMBNAIL_SPACING = 10;
+var THUMBNAIL_SIZE = ((DEVICE_WIDTH - (THUMBNAIL_SPACING * ((THUMBNAILS_PER_ROW * 2) + 2))) / THUMBNAILS_PER_ROW);
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  thumbnail: {
+    margin: THUMBNAIL_SPACING,
+    width: THUMBNAIL_SIZE,
+    height: THUMBNAIL_SIZE,
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  header: {
+    padding: 20,
+    borderBottomColor: '#eee',
+    borderBottomWidth: 1,
+    alignItems: 'center',
+  },
+  heading: {
+    fontSize: 18,
+  },
+  imagegrid: {
+    flex: 1,
+  },
+  layout: {
+    margin: THUMBNAIL_SPACING,
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between'
   },
 });
 
 const list = [
   {
-    description: ':O hat etc',
-    imageUrl: 'https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/14276382_1737295453196749_1335762274_n.jpg?ig_cache_key=MTMzNDMzMDE3NTk0MDQyMDQ4Ng%3D%3D.2',
+    description: 'Image 1',
+    imageUrl: 'http://placehold.it/480x480&text=Image%201',
     width: 480,
     height: 480,
   },
   {
-    imageUrl: 'https://scontent-sea1-1.cdninstagram.com/t51.2885-15/e15/14448401_926765740761369_3613737894616760320_n.jpg?ig_cache_key=MTM0NDQ0OTEzNDI0OTIxMzgzNA%3D%3D.2',
-    description: 'wood',
+    description: 'Image 2',
+    imageUrl: 'http://placehold.it/640x640&text=Image%202',
     width: 640,
     height: 640,
   },
   {
-    imageUrl: 'https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/14272256_1576830565957175_619863550_n.jpg?ig_cache_key=MTMzOTMwNzg3OTc3NzI1MTQzMA%3D%3D.2',
-    description: 'making beer etc',
+    description: 'Image 3',
+    imageUrl: 'http://placehold.it/640x640&text=Image%203',
     width: 640,
     height: 640,
   }
