@@ -1,0 +1,76 @@
+Arguments: 
+  /usr/local/bin/node /Users/evanbacon/.yarn/bin/yarn.js add expo-constants expo-assets
+
+PATH: 
+  /Users/evanbacon/Downloads/cocos2d-x-3.16/templates:/Users/evanbacon/Downloads:/Users/evanbacon/Downloads/cocos2d-x-3.16/tools/cocos2d-console/bin:/Users/evanbacon/Library/Android/sdk/platform-tools:/Users/evanbacon/.fastlane/bin:/Users/evanbacon/.yarn/bin:/Users/evanbacon/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/evanbacon/Downloads/cocos2d-x-3.16/templates:/Users/evanbacon/Downloads:/Users/evanbacon/Downloads/cocos2d-x-3.16/tools/cocos2d-console/bin:/Users/evanbacon/Library/Android/sdk/platform-tools:/Users/evanbacon/.fastlane/bin:/Users/evanbacon/.yarn/bin:/Users/evanbacon/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin
+
+Yarn version: 
+  1.12.3
+
+Node version: 
+  8.10.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/expo-assets: Not found
+      at Request.params.callback [as _callback] (/Users/evanbacon/.yarn/lib/cli.js:65894:18)
+      at Request.self.callback (/Users/evanbacon/.yarn/lib/cli.js:129018:22)
+      at emitTwo (events.js:126:13)
+      at Request.emit (events.js:214:7)
+      at Request.<anonymous> (/Users/evanbacon/.yarn/lib/cli.js:129990:10)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at IncomingMessage.<anonymous> (/Users/evanbacon/.yarn/lib/cli.js:129912:12)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:111:20)
+
+npm manifest: 
+  {
+    "name": "@expo/react-native-image-gallery",
+    "version": "3.0.0",
+    "description": "Image gallery for Expo",
+    "author": "support@expo.io",
+    "files": [
+      "lib"
+    ],
+    "main": "lib/index.js",
+    "directories": {
+      "example": "example",
+      "lib": "lib"
+    },
+    "homepage": "https://github.com/expo/react-native-image-gallery#readme",
+    "keywords": [
+      "expo",
+      "photos",
+      "images",
+      "gallery"
+    ],
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/expo/react-native-image-gallery/issues"
+    },
+    "dependencies": {
+      "immutable": "^3.8.1",
+      "mirror-creator": "^1.1.0",
+      "prop-types": "^15.6.2",
+      "react-redux": "^4.4.5",
+      "react-timer-mixin": "^0.13.4",
+      "redux": "^3.5.2"
+    },
+    "peerDependencies": {
+      "expo": ">= 30.0.0",
+      "react-native": "*"
+    },
+    "devDependencies": {
+      "babel-preset-expo": "^5.0.0",
+      "babel-preset-react-native": "^4.0.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
