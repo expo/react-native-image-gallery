@@ -1,10 +1,10 @@
 {
   "name": "image-gallery-example",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "support@expo.io",
   "main": "node_modules/expo/AppEntry.js",
   "dependencies": {
-    "@expo/react-native-image-gallery": "../expo-react-native-image-gallery-2.3.0.tgz",
+    "@expo/react-native-image-gallery": "../expo-react-native-image-gallery-v3.0.0.tgz",
     "expo": "^32.0.1",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",

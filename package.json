@@ -1,6 +1,6 @@
 {
   "name": "@expo/react-native-image-gallery",
-  "version": "2.3.0",
+  "version": "3.0.0",
   "description": "Image gallery for Expo",
   "author": "support@expo.io",
   "files": [
@@ -31,7 +31,8 @@
     "redux": "^3.5.2"
   },
   "peerDependencies": {
-    "expo": ">= 30.0.0",
+    "expo-asset": "^2.0.0",
+    "expo-constants": "^2.0.1",
     "react-native": "*"
   },
   "devDependencies": {
