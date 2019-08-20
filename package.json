@@ -1,7 +1,7 @@
 {
-  "name": "@expo/react-native-image-gallery",
+  "name": "react-navigation-image-gallery",
   "version": "3.1.0",
-  "description": "Image gallery for Expo",
+  "description": "Image gallery for React Navigation",
   "author": "support@expo.io",
   "files": [
     "lib"
@@ -31,7 +31,8 @@
     "redux": "^3.5.2"
   },
   "peerDependencies": {
-    "react-native": "*"
+    "react-native": "*",
+    "react-navigation": "*"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0",
